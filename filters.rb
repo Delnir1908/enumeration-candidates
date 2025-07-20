@@ -5,4 +5,11 @@
     # Your code Here
     candidates.select.with_index {|candidate| candidate[:id] == id}.map(&:first)
   end
-
+  
+  def experienced?(candidate)
+    # Your code Here
+    if candidate[:years_of_experience] >= 2
+      true
+    else
+      false
+  end
