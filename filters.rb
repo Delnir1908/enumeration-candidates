@@ -59,4 +59,8 @@
   
   # More methods will go below
 
-
+  def ordered_by_qualifications(candidates)
+    candidates.sort { |a, b| 
+    [a[:years_of_experience], a[:github_points]] 
+      <=> [b[:years_of_experience], b[:github_points]] }
+  end
